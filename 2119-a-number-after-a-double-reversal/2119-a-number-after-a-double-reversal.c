@@ -15,9 +15,6 @@ bool isSameAfterReversals(int num) {
     return true;
     else if(num%10==0)
     return false;
-    else if(num==rev2)
+    else 
         return true;
-    else
-    return false;
-
-}
+ }
