@@ -6,13 +6,12 @@
  * };
  */
 struct ListNode* reverseList(struct ListNode* head) {
-    struct ListNode* prev=NULL, *curr=head, *next;
+    struct ListNode* l=NULL, *curr=head, *r;
     while(curr!=NULL){
-        next=curr->next;
-        curr->next=prev;
-        prev=curr;
-        curr=next;
+      r=curr->next;
+      curr->next=l;
+      l=curr;
+      curr=r;
     }
-    return prev;
-    
+    return l;
 }
